@@ -6,37 +6,37 @@ namespace BootCamp.Chapter
 {
     class Lesson3
     {
-        static string name = Name();
-        static int age = Age();
-        static float height = Height();
-        static float weight = Weight();
-        static float bmi = BMI();
         public static string Name()
         {
-            Console.WriteLine("Please input your first and last name: ");
+            Console.WriteLine("Testing");
             return Console.ReadLine();
         }
         public static int Age()
         {
-            Console.WriteLine("Please input your age: ");
+            Console.WriteLine("Testing");
             return int.Parse(Console.ReadLine()) ;
         }
         public static float Weight()
         {
-            Console.WriteLine("Please input your weight, in kg: ");
+            Console.WriteLine("Testing");
             return float.Parse(Console.ReadLine());
         }
         public static float Height()
         {
-            Console.WriteLine("Please input your height, in m");
+            Console.WriteLine("Testing");
             return float.Parse(Console.ReadLine());
         }
-        public static float BMI()
+        public static float BMI(float weight, float height)
         { 
             return weight / (height * height);
         }
         public static void Demo()
         {
+            string name = Name();
+            int age = Age();
+            float height = Height();
+            float weight = Weight();
+            float bmi = BMI(weight, height);
             Console.WriteLine("Hello " + name + "! You are " + age + " years of age, are " + height + "cm tall, and are " + weight + " kg. This makes your BMI " + bmi + ".");
         }
     }
